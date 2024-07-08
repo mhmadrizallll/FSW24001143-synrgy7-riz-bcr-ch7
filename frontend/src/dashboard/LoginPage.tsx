@@ -63,6 +63,7 @@ const LoginPage: React.FC = () => {
 
   const onSuccess = async (res: CredentialResponse) => {
     const token = res.credential;
+    console.log("Google token:", token);
     try {
       const response = await axios.post(
         "http://localhost:8000/api/users/auth/google",

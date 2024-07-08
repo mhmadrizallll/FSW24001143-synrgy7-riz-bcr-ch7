@@ -14,7 +14,7 @@ import CreatePage from "./dashboard/CreateCar";
 import { ApiProvider } from "./Context/ApiContext";
 
 const CLIENT_ID =
-  "60480331234-0g4skn3itkasqgmu3klibaipfiae6k91.apps.googleusercontent.com";
+  "60480331234-8u31ccmifsgmtnfc2podsteg0apeptp5.apps.googleusercontent.com";
 
 function App() {
   useEffect(() => {
@@ -24,8 +24,8 @@ function App() {
   }, []);
 
   return (
-    <ApiProvider>
-      <GoogleOAuthProvider clientId={CLIENT_ID}>
+    <GoogleOAuthProvider clientId={CLIENT_ID}>
+      <ApiProvider>
         <BrowserRouter>
           <Routes>
             <Route path="/login" element={<LoginPage />} />
@@ -45,8 +45,8 @@ function App() {
             />
           </Routes>
         </BrowserRouter>
-      </GoogleOAuthProvider>
-    </ApiProvider>
+      </ApiProvider>
+    </GoogleOAuthProvider>
   );
 }
 
